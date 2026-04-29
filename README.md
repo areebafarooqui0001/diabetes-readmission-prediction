@@ -13,6 +13,7 @@ within 30 days using real clinical data from 130 US hospitals.
 |------|-------------|
 | `01_EDA.ipynb` | Exploratory Data Analysis |
 | `02_Feature_Engineering.ipynb` | Cleaning, encoding & feature creation |
+| `03_Model_Building.ipynb` | Model building & evaluation (all models) |
 | `diabetic_data.csv` | Raw dataset |
 | `diabetic_ml_ready.csv` | ML-ready dataset (101K rows × 67 features) |
 
@@ -22,7 +23,17 @@ within 30 days using real clinical data from 130 US hospitals.
 - Dataset uses '?' for missing values — detected and replaced with NaN
 - 700+ ICD-9 diagnosis codes simplified into 8 meaningful medical categories
 - Circulatory conditions dominate as primary diagnosis (30,458 patients)
-- Final dataset: 50 raw columns → 67 ML-ready features after encoding
+- Applied SMOTE on training data only — balanced from 8:1 → 1:1 (prevents data leakage)
+- Final dataset: 50 raw columns → 66 ML-ready features after encoding
+
+## 📈 Model Results
+| Model | ROC-AUC | F1 Score | Recall |
+|-------|---------|----------|--------|
+| Logistic Regression | 0.545 | 0.165 | 0.206 |
+| Random Forest | Coming soon | | |
+| XGBoost | Coming soon | | |
+
+> ⚠️ ROC-AUC is primary metric — accuracy is misleading with 8:1 class imbalance
 
 ## 🛠️ Tech Stack
 Python, Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, XGBoost, Imbalanced-learn
