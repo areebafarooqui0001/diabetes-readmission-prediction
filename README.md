@@ -30,8 +30,6 @@ within 30 days using real clinical data from 130 US hospitals.
 | Model | ROC-AUC | F1 Score | Recall |
 |-------|---------|----------|--------|
 | Logistic Regression | 0.545 | 0.165 | 0.206 |
-| Random Forest | Coming soon | | |
-| XGBoost | Coming soon | | |
 
 > ⚠️ ROC-AUC is primary metric — accuracy is misleading with 8:1 class imbalance
 
