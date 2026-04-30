@@ -24,16 +24,17 @@ within 30 days using real clinical data from 130 US hospitals.
 - 700+ ICD-9 diagnosis codes simplified into 8 meaningful medical categories
 - Circulatory conditions dominate as primary diagnosis (30,458 patients)
 - Applied SMOTE on training data only — balanced from 8:1 → 1:1 (prevents data leakage)
-- Top predictive features: num_lab_procedures, num_medications, time_in_hospital, age
-- Key insight: In healthcare, Recall > Precision — missing a high-risk patient is costlier than a false alarm
+- Top predictive feature: prior inpatient visits (number_inpatient) — strongest readmission signal
 
 ## 📈 Model Results
-| Model | ROC-AUC | F1 Score | Recall |
-|-------|---------|----------|--------|
-| Logistic Regression | 0.545 | 0.165 | 0.206 |
-| Random Forest | 0.599 | 0.112 | 0.089 |
+| Model | ROC-AUC | Recall | F1 Score | Accuracy |
+|-------|---------|--------|----------|----------|
+| Logistic Regression | 0.545 | 0.206 | 0.165 | 76.8% |
+| Random Forest | 0.599 | 0.089 | 0.112 | 84.2% |
+| **XGBoost** 🏆 | **0.659** | **0.517** | **0.266** | 68.2% |
 
-> ⚠️ ROC-AUC is primary metric — accuracy is misleading with 8:1 class imbalance
+> ⚠️ ROC-AUC & Recall are primary metrics — accuracy is misleading with 8:1 class imbalance.
+> XGBoost catches 5.8x more high-risk patients than Random Forest.
 
 ## ▶️ How to Run
 1. Clone the repo: `git clone https://github.com/areebafarooqui0001/diabetes-readmission-prediction`
