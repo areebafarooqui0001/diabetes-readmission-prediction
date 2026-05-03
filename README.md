@@ -4,7 +4,7 @@ Predicting whether a diabetic patient will be readmitted to hospital
 within 30 days using real clinical data from 130 US hospitals.
 
 ## 🚀 Live Demo
-👉 [Try the app here](https://areebafarooqui0001-diabetes-readmission-prediction.streamlit.app)
+👉 [Try the app here](https://a-f-diabetes-readmission-prediction.streamlit.app/)
 
 ## 📊 Dataset
 - Source: UCI ML Repository — Diabetes 130-US Hospitals (1999-2008)
