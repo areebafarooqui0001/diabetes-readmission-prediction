@@ -3,6 +3,9 @@
 Predicting whether a diabetic patient will be readmitted to hospital 
 within 30 days using real clinical data from 130 US hospitals.
 
+## 🚀 Live Demo
+👉 [Try the app here](https://areebafarooqui0001-diabetes-readmission-prediction.streamlit.app)
+
 ## 📊 Dataset
 - Source: UCI ML Repository — Diabetes 130-US Hospitals (1999-2008)
 - Size: 101,766 patient encounters × 50 features
@@ -14,8 +17,10 @@ within 30 days using real clinical data from 130 US hospitals.
 | `01_EDA.ipynb` | Exploratory Data Analysis |
 | `02_Feature_Engineering.ipynb` | Cleaning, encoding & feature creation |
 | `03_Model_Building.ipynb` | Model building, HPT & evaluation (all models) |
+| `app.py` | Streamlit web application |
 | `diabetic_data.csv` | Raw dataset |
 | `diabetic_ml_ready.csv` | ML-ready dataset (101K rows × 67 columns) |
+| `xgb_model.pkl` | Saved tuned XGBoost model |
 
 ## 🔍 Key Findings
 - Only 11.2% of patients are readmitted within 30 days — significant class imbalance (8:1)
@@ -50,8 +55,9 @@ within 30 days using real clinical data from 130 US hospitals.
 
 ## ▶️ How to Run
 1. Clone the repo: `git clone https://github.com/areebafarooqui0001/diabetes-readmission-prediction`
-2. Install dependencies: `pip install pandas numpy matplotlib seaborn scikit-learn xgboost imbalanced-learn`
+2. Install dependencies: `pip install pandas numpy matplotlib seaborn scikit-learn xgboost imbalanced-learn joblib streamlit`
 3. Run notebooks in order: `01_EDA` → `02_Feature_Engineering` → `03_Model_Building`
+4. Launch app: `python -m streamlit run app.py`
 
 ## 🛠️ Tech Stack
-Python, Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, XGBoost, Imbalanced-learn
+Python, Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, XGBoost, Imbalanced-learn, Streamlit
